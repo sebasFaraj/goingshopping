@@ -1,7 +1,7 @@
 import Axios from "axios";
 import { MenProduct } from "../components/MenProduct";
 
-const res = await Axios.get("http://localhost:3001/products/");
+const res = await Axios.get(process.env.STORE_API);
 
 const mens = res.data.products.filter(product => {
    if (product.category === "mens" && product.availability === true)
