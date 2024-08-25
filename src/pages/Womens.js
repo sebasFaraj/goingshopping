@@ -1,7 +1,7 @@
 import Axios from "axios";
 import { WomenProduct } from "../components/WomenProduct";
 
-const res = await Axios.get(process.env.STORE_API);
+const res = await Axios.get('https://storefrontapi-faraj-b137e0cb3dc0.herokuapp.com/products/');
 
 const womens = res.data.products.filter(product => {
    if (product.category === "womens" && product.availability === true)
